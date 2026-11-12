@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#080611" />
+  <meta name="description" content="The Grind — Web3 gaming, creators and community. Build. Connect. Earn." />
+  <title>THE GRIND | Web3 Gaming Community</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;600;700;800&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <header class="topbar">
+    <a class="brand" href="#"><span class="brand-mark">TG</span><span>THE <b>GRIND</b></span></a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">☰</button>
+    <nav id="mainNav">
+      <a href="#home">Home</a><a href="#collabs">Collaborations</a><a href="#giveaways">Giveaways</a><a href="#community">Community</a><a href="#founder">Founder</a>
+    </nav>
+    <a class="nav-cta" id="xLink" href="https://x.com/" target="_blank" rel="noreferrer">Join Community <span>↗</span></a>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-copy">
+        <p class="eyebrow"><i></i> WEB3 · NFT · GAMING · COMMUNITY</p>
+        <h1>THE <span>GRIND</span></h1>
+        <h2>BUILD <b>•</b> CONNECT <b>•</b> <em>EARN</em></h2>
+        <p class="hero-intro">A next-gen home for gamers, creators and Web3 builders. Find your people, discover opportunities and grow together.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" id="heroJoin" href="https://x.com/" target="_blank" rel="noreferrer">⚡ Join The Community <span>→</span></a>
+          <a class="button button-ghost" href="#collabs">Explore the hub <span>↓</span></a>
+        </div>
+        <div class="hero-tags"><span>✦ GAMING CULTURE</span><span>✦ WEB3 OPPORTUNITIES</span><span>✦ REAL COMMUNITY</span></div>
+      </div>
+      <div class="hero-art" aria-label="Anime gaming character team artwork">
+        <div class="art-glow"></div><div class="art-label">THE GRIND<br><strong>GENESIS SQUAD</strong></div>
+      </div>
+      <div class="hero-bottom-line"><span></span> NO SHORTCUTS. JUST THE GRIND. <span></span></div>
+    </section>
+
+    <section class="stats-strip" aria-label="Community highlights">
+      <div><strong>01</strong><span>BUILD TOGETHER</span></div><div><strong>02</strong><span>CREATE VALUE</span></div><div><strong>03</strong><span>GROW ONCHAIN</span></div><div><strong>04</strong><span>STAY CONNECTED</span></div>
+    </section>
+
+    <section id="collabs" class="section">
+      <div class="section-head"><div><p class="eyebrow">PARTNERS IN THE GRIND</p><h2>COLLABORATIONS <span>／</span></h2><p class="section-sub">Projects we are building and growing with.</p></div>
+        <div class="filters"><button class="filter active" data-filter="All">All</button><button class="filter" data-filter="Active">Active</button><button class="filter" data-filter="Ended">Ended</button></div>
+      </div>
+      <div id="collabGrid" class="grid"></div>
+    </section>
+
+    <section id="giveaways" class="section giveaway-section">
+      <div class="giveaway-art"><div class="gift-orbit">✧</div><div class="gift-box">◇</div><span>REWARDS<br>DROP</span></div>
+      <div class="giveaway-copy"><p class="eyebrow"><i></i> YOUR NEXT WIN STARTS HERE</p><h2>COMMUNITY <span>GIVEAWAY</span></h2><p>We bring opportunities to the community. Check the original post for eligibility, rules and entry details.</p><a id="giveawayLink" class="button button-primary" href="https://x.com/" target="_blank" rel="noreferrer">🎁 Join Giveaway <span>→</span></a></div>
+      <div class="giveaway-stamp">DON'T<br>MISS<br><b>OUT!</b></div>
+    </section>
+
+    <section id="founder" class="section">
+      <div class="section-head"><div><p class="eyebrow">THE VISION BEHIND THE MOVEMENT</p><h2>FOUNDER <span>TRANSMISSION</span></h2><p class="section-sub">Updates, thoughts and direction from The Grind founder.</p></div></div>
+      <div id="founderGrid" class="grid"></div>
+    </section>
+
+    <section id="community" class="section community-section">
+      <div class="section-head"><div><p class="eyebrow">MADE STRONGER TOGETHER</p><h2>COMMUNITY <span>FEED</span></h2><p class="section-sub">The people, conversations and moments that move us forward.</p></div></div>
+      <div id="communityGrid" class="grid"></div>
+    </section>
+
+    <section class="final-cta"><div><p class="eyebrow">YOUR STORY STARTS HERE</p><h2>FIND YOUR CREW.<br><span>MAKE YOUR MOVE.</span></h2></div><a class="button button-primary" id="bottomJoin" href="https://x.com/" target="_blank" rel="noreferrer">JOIN THE GRIND <span>↗</span></a></section>
+  </main>
+
+  <footer><a class="brand" href="#"><span class="brand-mark">TG</span><span>THE <b>GRIND</b></span></a><p>Build. Connect. Earn. — Together we grind stronger.</p><div class="footer-links"><a id="footerX" href="https://x.com/" target="_blank" rel="noreferrer">X / TWITTER ↗</a><a href="#collabs">COLLABORATIONS</a><a href="#giveaways">GIVEAWAYS</a></div><small>© <span id="year"></span> THE GRIND COMMUNITY. ALL RIGHTS RESERVED.</small></footer>
+  <script src="script.js"></script>
+</body>
+</html>
