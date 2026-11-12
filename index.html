@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="The Grind — Web3 community, creator campaigns, projects and collaborations." />
+  <title>The Grind — Web3 Creator Community</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="#activity"><span class="brand-mark">G</span><span>THE GRIND<small>WEB3 COMMUNITY</small></span></a>
+      <div class="nav-label">COMMUNITY</div>
+      <nav class="side-nav" aria-label="Main navigation">
+        <button class="nav-item active" data-page="activity"><span class="nav-icon">◫</span> Activity</button>
+        <button class="nav-item" data-page="discover"><span class="nav-icon">⌕</span> Discover</button>
+        <button class="nav-item" data-page="ugc"><span class="nav-icon">▧</span> UGC Campaigns <span class="nav-count">3</span></button>
+        <button class="nav-item" data-page="giveaways"><span class="nav-icon">✳</span> Giveaways</button>
+        <button class="nav-item" data-page="live"><span class="nav-icon">◉</span> Live Campaigns</button>
+        <button class="nav-item" data-page="collabs"><span class="nav-icon">↗</span> Collaborations</button>
+      </nav>
+      <div class="nav-label second-label">YOUR SPACE</div>
+      <nav class="side-nav">
+        <button class="nav-item" data-page="profile"><span class="nav-icon">♙</span> My Profile</button>
+        <button class="nav-item opportunities hidden" id="opportunitiesNav" data-page="opportunities"><span class="nav-icon">✧</span> Opportunities</button>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="help-card"><div class="help-icon">✦</div><strong>Build with the community</strong><p>Discover projects, create content and grow together.</p><button data-page="discover" class="text-button">Explore community →</button></div>
+        <button class="admin-link" data-page="admin"><span>⚙</span> Admin dashboard <small>Preview</small></button>
+        <div class="sidebar-user"><div class="avatar">TG</div><div><strong>Guest Creator</strong><small>Visitor account</small></div><button id="loginOpen" class="more-btn" aria-label="Login">↗</button></div>
+      </div>
+    </aside>
+
+    <main class="main-area">
+      <header class="topbar"><div class="mobile-brand">THE <b>GRIND.</b></div><div class="breadcrumb"><span>Community</span><i>/</i><strong id="pageCrumb">Activity</strong></div><div class="top-actions"><label class="search-box"><span>⌕</span><input id="globalSearch" placeholder="Search projects, campaigns..." /></label><button class="icon-btn" title="Notifications">♧<i></i></button><button class="avatar small-avatar" id="topLogin">TG</button></div></header>
+
+      <section class="page active" id="page-activity">
+        <div class="welcome-row"><div><p class="eyebrow">FRIDAY, NOVEMBER 13, 2026</p><h1>Make your next move <span>count.</span></h1><p class="lead">A place for Web3 projects, creators and people who make things happen.</p></div><button class="button primary" data-page="discover">Explore Discover <span>→</span></button></div>
+        <div class="stats-row"><div class="stat-card"><span>UGC CAMPAIGNS</span><strong id="statUgc">03</strong><small>Open for creators</small></div><div class="stat-card"><span>ACTIVE GIVEAWAYS</span><strong id="statGiveaways">02</strong><small>Join the community</small></div><div class="stat-card"><span>COLLABORATIONS</span><strong>08</strong><small>Across the ecosystem</small></div><div class="stat-card"><span>CREATORS</span><strong>1.2k+</strong><small>Building together</small></div></div>
+        <div class="section-heading"><div><p class="eyebrow">WHAT'S HAPPENING</p><h2>Latest activity</h2><p>Fresh updates from across The Grind.</p></div><button class="text-button" data-page="ugc">View all activity →</button></div>
+        <div class="activity-layout"><div class="activity-feed" id="activityFeed"></div><aside class="right-rail"><div class="rail-card"><div class="rail-head"><h3>Featured campaign</h3><span class="live-pill">LIVE</span></div><div class="featured-art art-purple"><span>01</span><b>CREATE<br>WITH PURPOSE</b><small>CREATOR CAMPAIGN</small></div><h4>Build a story around the next wave of Web3</h4><p>Share your perspective and submit your content.</p><button class="button dark full" data-page="ugc">Explore campaign →</button></div><div class="rail-card community-card"><p class="eyebrow">THE GRIND ON X</p><h3>Stay in the loop.</h3><p>Follow community announcements, updates and new opportunities.</p><a class="text-button" href="https://x.com/" target="_blank" rel="noreferrer">Follow on X ↗</a></div></aside></div>
+      </section>
+
+      <section class="page" id="page-discover">
+        <div class="page-title-row"><div><p class="eyebrow">FIND YOUR NEXT COLLABORATION</p><h1>Discover</h1><p class="lead">Explore projects, creators and ideas shaping Web3.</p></div><button class="button primary" id="submitProjectOpen">＋ Submit a project</button></div>
+        <div class="tabs" id="discoverTabs"><button class="tab active" data-category="All">All</button><button class="tab" data-category="Web3">Web3</button><button class="tab" data-category="NFT">NFT</button><button class="tab" data-category="Design">Design</button><button class="tab" data-category="Content">Content</button></div>
+        <div class="card-grid" id="projectGrid"></div>
+        <div class="section-heading lower-heading"><div><p class="eyebrow">PEOPLE BEHIND THE WORK</p><h2>Creators to watch</h2></div></div><div class="creator-strip"><div class="creator"><div class="avatar avatar-blue">AK</div><b>Alex Kim</b><small>Research & writing</small></div><div class="creator"><div class="avatar avatar-pink">JM</div><b>Jamie M.</b><small>Visual storyteller</small></div><div class="creator"><div class="avatar avatar-green">RS</div><b>Raihan S.</b><small>Web3 creator</small></div><div class="creator"><div class="avatar avatar-orange">NL</div><b>Nora Lee</b><small>Community builder</small></div></div>
+      </section>
+
+      <section class="page" id="page-ugc">
+        <div class="page-title-row"><div><p class="eyebrow">CREATE. SHARE. GET RECOGNIZED.</p><h1>UGC Campaigns</h1><p class="lead">Projects share a brief. You create original content and submit your work here.</p></div><div class="page-badge"><span class="green-dot"></span> Creator submissions open</div></div>
+        <div class="info-banner"><div class="info-symbol">✦</div><div><strong>Your creativity can open doors.</strong><p>Choose a campaign, read its brief carefully, create your content and submit a public link or file for review.</p></div></div>
+        <div class="toolbar"><div class="tabs"><button class="tab active" data-ugc-filter="All">All campaigns</button><button class="tab" data-ugc-filter="Open">Open</button><button class="tab" data-ugc-filter="Invite Only">Invite only</button></div><span class="muted small" id="ugcCount">3 campaigns</span></div>
+        <div class="campaign-grid" id="ugcGrid"></div>
+      </section>
+
+      <section class="page" id="page-giveaways">
+        <div class="page-title-row"><div><p class="eyebrow">COMMUNITY REWARDS</p><h1>Giveaways</h1><p class="lead">Take part in community giveaways and submit your entry.</p></div></div>
+        <div class="tabs" id="giveawayTabs"><button class="tab active" data-giveaway-filter="Active">Active giveaways</button><button class="tab" data-giveaway-filter="Ended">Ended</button></div><div class="campaign-grid" id="giveawayGrid"></div>
+      </section>
+
+      <section class="page" id="page-live">
+        <div class="page-title-row"><div><p class="eyebrow">WHAT'S LIVE IN THE ECOSYSTEM</p><h1>Live Campaigns</h1><p class="lead">Explore ongoing campaigns and participate through the official project links.</p></div></div><div class="campaign-grid" id="liveGrid"></div>
+      </section>
+
+      <section class="page" id="page-collabs">
+        <div class="page-title-row"><div><p class="eyebrow">BETTER TOGETHER</p><h1>Collaborations</h1><p class="lead">Projects and teams The Grind has connected with.</p></div></div><div class="tabs" id="collabTabs"><button class="tab active" data-collab-filter="All">All</button><button class="tab" data-collab-filter="Active">Active</button><button class="tab" data-collab-filter="Upcoming">Upcoming</button><button class="tab" data-collab-filter="Ended">Ended</button></div><div class="card-grid" id="collabGrid"></div>
+      </section>
+
+      <section class="page" id="page-profile">
+        <div class="page-title-row"><div><p class="eyebrow">YOUR CREATOR SPACE</p><h1>My Profile</h1><p class="lead">Your profile and contributions will live here after you sign in.</p></div><button class="button primary" id="profileLogin">Sign in to edit profile</button></div>
+        <div class="profile-preview"><div class="profile-cover"></div><div class="profile-info"><div class="avatar profile-avatar">TG</div><div><h2>Guest Creator</h2><p>Join The Grind to showcase your work, track submissions and take part in campaigns.</p><span class="muted small">No account signed in</span></div></div><div class="profile-stats"><div><b>0</b><small>UGC submissions</small></div><div><b>0</b><small>Approved works</small></div><div><b>0</b><small>Giveaway entries</small></div></div></div>
+      </section>
+
+      <section class="page" id="page-opportunities">
+        <div class="page-title-row"><div><p class="eyebrow">GROW WITH THE ECOSYSTEM</p><h1>Opportunities</h1><p class="lead">Ambassador programs, creator roles, paid tasks and partnerships.</p></div></div><div class="empty-state"><div>✧</div><h3>Opportunities are coming soon.</h3><p>We’ll open this section when the community is ready.</p></div>
+      </section>
+
+      <section class="page" id="page-admin">
+        <div class="page-title-row"><div><p class="eyebrow">CONTROL CENTER · DEMO MODE</p><h1>Admin Dashboard</h1><p class="lead">Manage campaign content in this local preview.</p></div><span class="demo-label">FRONT-END PREVIEW</span></div>
+        <div class="admin-warning"><b>Demo mode:</b> Changes are saved only in this browser using local storage. Secure admin login and shared database will be connected in the backend phase.</div>
+        <div class="admin-tabs"><button class="admin-tab active" data-admin-tab="ugcAdmin">UGC Campaigns</button><button class="admin-tab" data-admin-tab="giveawayAdmin">Giveaways</button><button class="admin-tab" data-admin-tab="settingsAdmin">Website Settings</button></div>
+        <div class="admin-panel active" id="ugcAdmin"><div class="admin-panel-head"><div><h2>UGC Campaign Management</h2><p>Create and manage creator briefs.</p></div><button class="button primary" id="newUgc">＋ Create UGC campaign</button></div><div class="table-wrap"><table><thead><tr><th>CAMPAIGN</th><th>TYPE</th><th>SUBMISSIONS</th><th>STATUS</th><th>ACTION</th></tr></thead><tbody id="ugcAdminRows"></tbody></table></div></div>
+        <div class="admin-panel" id="giveawayAdmin"><div class="admin-panel-head"><div><h2>Giveaway Management</h2><p>Create and manage giveaway listings.</p></div><button class="button primary" id="newGiveaway">＋ Create giveaway</button></div><div class="table-wrap"><table><thead><tr><th>GIVEAWAY</th><th>REWARD</th><th>ENTRIES</th><th>STATUS</th><th>ACTION</th></tr></thead><tbody id="giveawayAdminRows"></tbody></table></div></div>
+        <div class="admin-panel" id="settingsAdmin"><div class="admin-panel-head"><div><h2>Website visibility</h2><p>Choose which sections appear in the public navigation.</p></div></div><div class="setting-row"><div><b>Opportunities section</b><p>Show ambassador, paid task and partnership opportunities.</p></div><label class="switch"><input type="checkbox" id="opportunitiesToggle"><span></span></label></div><div class="setting-row"><div><b>UGC Campaigns</b><p>Display the UGC Campaigns section in the main navigation.</p></div><label class="switch"><input type="checkbox" checked disabled><span></span></label></div><p class="muted small">More navigation and branding settings will be added in the next iteration.</p></div>
+      </section>
+      <footer class="footer"><span class="brand-footer">THE <b>GRIND.</b></span><span>Built around people, participation and progress.</span><small>© <span id="year"></span> The Grind</small></footer>
+    </main>
+  </div>
+
+  <div class="modal-backdrop" id="modalBackdrop"><div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><button class="modal-close" id="modalClose" aria-label="Close">×</button><div id="modalContent"></div></div></div>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="script.js"></script>
+</body>
+</html>
