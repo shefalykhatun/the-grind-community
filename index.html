@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>THE GRIND | Community Hub</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#">THE <span>GRIND</span></a>
+    <nav>
+      <a href="#collabs">Collaborations</a>
+      <a href="#giveaways">Giveaways</a>
+      <a href="#founder">Founder</a>
+      <a href="#community">Community</a>
+    </nav>
+    <a class="join" id="xLink" href="#" target="_blank" rel="noreferrer">Join on X ↗</a>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="eyebrow">COMMUNITY • GAMING • WEB3</p>
+      <h1>BUILT BY THE COMMUNITY.<br><span>POWERED BY THE GRIND.</span></h1>
+      <p class="intro">Your home for collaborations, active giveaways, founder updates and community highlights.</p>
+      <a class="primary" href="#collabs">Explore the hub ↓</a>
+    </section>
+
+    <section id="collabs" class="section">
+      <div class="section-head"><div><p class="eyebrow">WORKING TOGETHER</p><h2>Collaborations</h2></div>
+        <div class="filters">
+          <button class="filter active" data-filter="All">All</button>
+          <button class="filter" data-filter="Active">Active</button>
+          <button class="filter" data-filter="Ended">Ended</button>
+        </div>
+      </div>
+      <div id="collabGrid" class="grid"></div>
+    </section>
+
+    <section id="giveaways" class="section giveaway-section">
+      <p class="eyebrow">DON'T MISS OUT</p><h2>Live Giveaway</h2>
+      <div class="giveaway">
+        <div><span class="live-dot"></span><b>GIVEAWAY RUNNING</b><h3>Community Giveaway</h3>
+          <p>Visit the original X post for rules, details and entry instructions.</p></div>
+        <a id="giveawayLink" class="primary" href="#" target="_blank" rel="noreferrer">Join Giveaway on X ↗</a>
+      </div>
+    </section>
+
+    <section id="founder" class="section">
+      <p class="eyebrow">FROM THE FOUNDER</p><h2>Founder Updates</h2>
+      <div id="founderGrid" class="grid"></div>
+    </section>
+
+    <section id="community" class="section">
+      <p class="eyebrow">THE PEOPLE BEHIND IT</p><h2>Community Posts</h2>
+      <div id="communityGrid" class="grid"></div>
+    </section>
+  </main>
+
+  <footer><a class="brand" href="#">THE <span>GRIND</span></a><p>Growing together, one grind at a time.</p><small>© <span id="year"></span> The Grind Community</small></footer>
+  <script src="script.js"></script>
+</body>
+</html>
